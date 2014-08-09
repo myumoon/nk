@@ -19,3 +19,10 @@
 *.exe
 *.out
 *.app
+
+# VS temp files
+*.suo
+*.ncb
+*.user
+Debug/
+Release/
