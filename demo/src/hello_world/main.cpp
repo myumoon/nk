@@ -7,6 +7,10 @@
 #include <nk/system/system.h>
 #include <nk/macros.h>
 
+#if defined(_RELEASE)
+#pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
+#endif
+
 int main( int argc, char* argv[] )
 {
 	(void)argc;
