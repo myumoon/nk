@@ -24,10 +24,19 @@
     <ClInclude Include="..\include\nk\macros.h">
       <Filter>include\nk</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\nk\types.h">
+      <Filter>include\nk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\endian.h">
+      <Filter>include\nk</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp">
       <Filter>src\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\endian.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

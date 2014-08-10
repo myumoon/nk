@@ -12,7 +12,7 @@
 #define NK_NK_H
 
 #include <nk/types.h>
-
+#include <nk/macros.h>
 
 
 

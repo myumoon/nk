@@ -83,10 +83,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\include\nk\debug\debugfunc.h" />
+    <ClInclude Include="..\include\nk\endian.h" />
     <ClInclude Include="..\include\nk\macros.h" />
+    <ClInclude Include="..\include\nk\types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp" />
+    <ClCompile Include="..\src\endian.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
