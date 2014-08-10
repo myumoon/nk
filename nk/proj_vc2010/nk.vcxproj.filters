@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1fa33310-c59f-4586-a9ec-a807c136f02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{3a50be8d-02f5-4bc3-9937-e4caf81eb153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk">
+      <UniqueIdentifier>{69c820ab-2953-4313-b86f-03018e580099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk\debug">
+      <UniqueIdentifier>{f81be42a-5cac-42fe-a2dd-98c191a1d1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\debug">
+      <UniqueIdentifier>{44dc8f3c-d4f5-4f8a-96f2-bc298155568d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\nk\debug\debugfunc.h">
+      <Filter>include\nk\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\macros.h">
+      <Filter>include\nk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\debug\debugfunc.cpp">
+      <Filter>src\debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
