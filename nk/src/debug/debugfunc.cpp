@@ -38,6 +38,7 @@ void _DefaultAssert( const char* test, const char* file, int line, const char* t
 
 void _DefaultWarning( const char* text )
 {
+	(void)text;
 }
 	
 }
