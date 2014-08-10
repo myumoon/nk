@@ -19,6 +19,12 @@
     <Filter Include="include\nk\utility">
       <UniqueIdentifier>{3d12891a-0cad-417f-a006-407784a2038d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\system">
+      <UniqueIdentifier>{5c3a05ee-34de-49e8-8fbe-8622dd741bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk\system">
+      <UniqueIdentifier>{b761b449-46c1-48b8-86e1-11b3e1d6cb9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\nk\debug\debugfunc.h">
@@ -36,6 +42,15 @@
     <ClInclude Include="..\include\nk\utility\utilityfunc.h">
       <Filter>include\nk\utility</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\nk\system\system.h">
+      <Filter>include\nk\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\system\systemEventListener.h">
+      <Filter>include\nk\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\system\window.h">
+      <Filter>include\nk\system</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp">
@@ -43,6 +58,12 @@
     </ClCompile>
     <ClCompile Include="..\src\endian.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\system\system.cpp">
+      <Filter>src\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\system\window.cpp">
+      <Filter>src\system</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -13,7 +13,7 @@
 
 #include <nk/types.h>
 #include <nk/macros.h>
-
+#include <nk/utility/utilityfunc.h>
 
 
 

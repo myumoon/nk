@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <windows.h>
+
+#include <nk/system/system.h>
 #include <nk/macros.h>
 
-#ifdef _NK_DISP_CONSOLE
 int main( int argc, char* argv[] )
-#else
-int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow )
-#endif
 {
-	(void)hInstance;
-	(void)hPrevInstance;
-	(void)lpCmdLine;
-	(void)nCmdShow;
-	
+	nk::system::InitParam	param( argc, argv, 1024, 768, 60, false, "nk demo" );
+	nk::system::System	system( param );
+
+	system.Initialize();
+	system.Run();
+	system.Terminate();
+
 	getchar();
 
 	return 0;
