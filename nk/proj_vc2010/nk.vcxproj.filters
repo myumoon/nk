@@ -16,6 +16,9 @@
     <Filter Include="src\debug">
       <UniqueIdentifier>{44dc8f3c-d4f5-4f8a-96f2-bc298155568d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\nk\utility">
+      <UniqueIdentifier>{3d12891a-0cad-417f-a006-407784a2038d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\nk\debug\debugfunc.h">
@@ -29,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="..\include\nk\endian.h">
       <Filter>include\nk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\utility\utilityfunc.h">
+      <Filter>include\nk\utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

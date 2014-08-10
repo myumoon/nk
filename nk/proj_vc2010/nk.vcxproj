@@ -86,6 +86,7 @@
     <ClInclude Include="..\include\nk\endian.h" />
     <ClInclude Include="..\include\nk\macros.h" />
     <ClInclude Include="..\include\nk\types.h" />
+    <ClInclude Include="..\include\nk\utility\utilityfunc.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp" />
