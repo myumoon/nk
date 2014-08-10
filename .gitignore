@@ -14,7 +14,6 @@
 *.la
 *.a
 *.lib
-
 # Executables
 *.exe
 *.out
@@ -27,5 +26,8 @@
 *.sdf
 *.opensdf
 ipch/
+demo/proj_vs2010/Debug/
+demo/proj_vs2010/*/Debug/
+nk/proj_vs2010/Debug/
 Debug/
 Release/
