@@ -23,11 +23,6 @@
 namespace nk {
 namespace system {
 
-class SystemEventListener;
-
-// ウインドウ更新時コールバック
-// typedef void (*WindowCallback)(void*);
-
 
 //=============================================================================
 /*!
@@ -36,11 +31,11 @@ class SystemEventListener;
 //=============================================================================
 class GLUTWindow {
 public:
-	GLUTWindow( SystemEventListener* eventListener = NULL );
+	GLUTWindow();
 	virtual ~GLUTWindow();
 	
 	//! ウインドウ生成
-	bool				Create( s32 width = 1024, s32 height = 768, f32 depth = 32, bool fullscreen = false, const char* title = "nk application" );
+	bool				Create( s32 width = 1024, s32 height = 768, s32 depth = 32, s32 stencil = 0, bool fullscreen = false, const char* title = "nk application" );
 
 	//! タイトルをつける
 	void				SetTitle( const char* title );
@@ -53,9 +48,6 @@ public:
 
 	//! 幅・高さ・深度の習得
 	//math::Vector		GetScreenParam( void ) const;
-
-	//! ウインドウハンドルを習得
-	//NK_WINDOW_HANDLE	GetWindowHandle( void ) const;
 
 	//! ビューポート行列を習得
 	//math::Matrix44		GetViewPortMatrix( void ) const;
@@ -73,19 +65,14 @@ public:
 	s32					GetHeight() const { return m_height; }
 	
 private:
-	static void			_DisplayGLUT();
-	static void			_DisplayReshape( int width, int height );
-
-	void				DisplayGLUT();
-	void				DisplayReshape( int width, int height );
 	
 private:
 	//----------------------メンバ変数-----------------------
 	s32							m_width;				//!< 幅
 	s32							m_height;				//!< 高さ
-	f32							m_depth;				//!< 深度
+	s32							m_depth;				//!< 深度
+	s32							m_stencil;				//!< ステンシル
 	bool						m_fullScreen;			//!< フルスクリーン
-	SystemEventListener*		m_eventListener;		//!< イベントリスナー
 };
 	
 }	// namespace system

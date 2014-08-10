@@ -13,45 +13,19 @@
 
 #include <nk/system/window.h>
 
+// #include <windows.h>
 #include <GL/glut.h>
+#include <GL/glfw.h>
+
+
+
 
 namespace {
-nk::system::GLUTWindow*	s_window	= NULL;
 }
 
 
 namespace nk {
 namespace system {
-
-
-//===========================================================================
-/*!	@brief		ディスプレイ関数
-	@param		none
-	@return		none
-*/
-//===========================================================================
-void GLUTWindow::_DisplayGLUT()
-{
-	if( s_window ) {
-		s_window->DisplayGLUT();
-	}
-
-}
-
-
-//===========================================================================
-/*!	@brief		DisplayReshape
-	@param		width	幅
-	@param		height	高さ
-	@return		none
-*/
-//===========================================================================
-void GLUTWindow::_DisplayReshape( int width, int height )
-{
-	if( s_window ) {
-		s_window->DisplayReshape( width, height );
-	}
-}
 
 
 	
@@ -61,9 +35,8 @@ void GLUTWindow::_DisplayReshape( int width, int height )
 	@param	none
 */
 //===========================================================================
-GLUTWindow::GLUTWindow( SystemEventListener* eventListener )
+GLUTWindow::GLUTWindow()
 {
-	m_eventListener	= eventListener;
 	m_width			= 0;
 	m_height		= 0;
 	m_depth			= 0;
@@ -87,50 +60,26 @@ GLUTWindow::~GLUTWindow()
 	@return		none
 */
 //===========================================================================
-bool GLUTWindow::Create( s32 width, s32 height, f32 depth, bool fullscreen, const char* title )
+bool GLUTWindow::Create( s32 width, s32 height, s32 depth, s32 stencil, bool fullscreen, const char* title )
 {
-	s_window	= this;
-
+	const int windowMode	= fullscreen ? GLFW_FULLSCREEN : GLFW_WINDOW;
+	
+	if( !glfwOpenWindow( width, height, 8, 8, 8, 8, depth, stencil, windowMode ) ) {
+		return false;
+	}
+	
+	glfwSetWindowTitle( title );
+	
 	m_width			= width;
 	m_height		= height;
 	m_depth			= depth;
+	m_stencil		= stencil;
 	m_fullScreen	= fullscreen;
-
-	glutCreateWindow( title );
-	glutReshapeWindow( width, height );
-	glutDisplayFunc( _DisplayGLUT );
-	glutReshapeFunc( _DisplayReshape );
-	
-	glClearColor( 0.0, 0.0, 0.0, 1.0 );
 
 	return true;
 }
 
 
-//===========================================================================
-/*!	@brief		ウインドウコールバック
-	@param		none
-	@return		none
-*/
-//===========================================================================
-void GLUTWindow::DisplayGLUT()
-{
-	glClear( GL_COLOR_BUFFER_BIT );
-	glFlush();
-}
-
-
-//===========================================================================
-/*!	@brief		リサイズコールバック
-	@param		width	幅
-	@param		height	高さ
-	@return		none
-*/
-//===========================================================================
-void GLUTWindow::DisplayReshape( int width, int height )
-{
-	glutReshapeWindow( GetWidth(), GetHeight() );
-}
 	
 }	// namespace system
 }	// namespace nk

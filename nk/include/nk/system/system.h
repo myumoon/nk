@@ -19,39 +19,37 @@
 namespace nk {
 namespace system {
 
-class SystemEventListener;
+class GameCoreInterface;
 class GLUTWindow;
 	
 
 //! アプリケーション初期化パラメータ
 struct InitParam {
-	s32			argc;						//!<	プログラム引数
-	char**		argv;						//!<	プログラム引数
-	s32			screenWidth;				//!<	スクリーン横幅
-	s32			screenHeight;				//!<	スクリーン縦幅
-	s32			frameRate;					//!<	フレームレート
-	bool		fullScreen;					//!<	フルスクリーン
-	char		strApplicationName[128];	//!<	アプリケーション名
+	s32			screenWidth;				//!< スクリーン横幅
+	s32			screenHeight;				//!< スクリーン縦幅
+	s32			screenDepth;				//!< デプス
+	s32			screenStencil;				//!< ステンシル
+	s32			frameRate;					//!< フレームレート
+	bool		fullScreen;					//!< フルスクリーン
+	char		strApplicationName[128];	//!< アプリケーション名
 
 	//! コンストラクタ
-	InitParam()
-	{
-		this->argc				= 0;
-		this->argv				= NULL;
+	InitParam() {
 		this->screenWidth		= 1024;
 		this->screenHeight		= 768;
+		this->screenDepth		= 32;
+		this->screenStencil		= 0;
 		this->frameRate			= 60;
 		this->fullScreen		= false;
 		strcpy( this->strApplicationName, "nk application" );
 	}
 
 	//! コンストラクタ
-	InitParam( s32 argc, char** argv, s32 screenWidth, s32 screenHeight, s32 frameRate, bool fullScreen, const char* appName )
-	{
-		this->argc				= argc;
-		this->argv				= argv;
+	InitParam( s32 screenWidth, s32 screenHeight, s32 depth, s32 stencil, s32 frameRate, bool fullScreen, const char* appName ) {
 		this->screenWidth		= screenWidth;
 		this->screenHeight		= screenHeight;
+		this->screenDepth		= depth;
+		this->screenStencil		= stencil;
 		this->frameRate			= frameRate;
 		this->fullScreen		= fullScreen;
 		strncpy( this->strApplicationName, appName, NKARRAY_SIZE(this->strApplicationName) );
@@ -68,7 +66,7 @@ public:
 	
 public:
 	//! コンストラクタ
-	System( const InitParam& param, SystemEventListener* eventlistener = NULL );
+	System( const InitParam& param, GameCoreInterface* gameCore = NULL );
 
 	//! デストラクタ
 	virtual ~System();
@@ -77,7 +75,7 @@ public:
 	/*!	@brief		ゲームイベントリスナー設定
 	*/
 	//===========================================================================
-	void	SetSystemEventListener( SystemEventListener* eventlistener );
+	void	SetGameCoreInterface( GameCoreInterface* gameCore );
 
 	//===========================================================================
 	/*!	@brief		初期化
@@ -103,7 +101,7 @@ private:
 
 private:
 	InitParam				m_initParam;				//!< 初期化パラメータ
-	SystemEventListener*	m_systemEventListener;		//!< リスナー
+	GameCoreInterface*		m_gameCoreInterface;		//!< リスナー
 	GLUTWindow*				m_window;					//!< ウインドウ
 
 private:
