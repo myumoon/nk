@@ -1,10 +1,11 @@
 //=============================================================================
 /*!	@file	types.h
-
 	@brief	Œ^’è‹`
-
 	@author	ryunosuke ide
-	@date	2012.06.08
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
 

@@ -1,12 +1,11 @@
 //=============================================================================
 /*!	@file	macros.h
-
 	@brief	îƒópÉ}ÉNÉç
-
 	@author	ryunosuke ide
-	@date	2011/11/15
-	@todo	Ç»Çµ
-	@bug	Ç»Çµ
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
 

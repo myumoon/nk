@@ -1,15 +1,13 @@
 //=============================================================================
-/*!	@file	GLUTWindow.cpp
-
-	@brief	ウインドウを管理するクラス
-
-	@author	井手 竜之介
-	@date	2011/11/15
-	@todo	なし
-	@bug	なし
+/*!	@file	window.h
+	@brief	ウインドウ管理
+	@author	ryunosuke ide
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
-
 
 #include <nk/system/window.h>
 

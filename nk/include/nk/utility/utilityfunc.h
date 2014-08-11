@@ -1,12 +1,14 @@
 //=============================================================================
 /*!	@file	utilityfunc.h
-
 	@brief	îƒópèàóù
-
 	@author	ryunosuke ide
-	@date	2014.08.10
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
+
 #ifndef NK_UTILITYFUNC_H
 #define NK_UTILITYFUNC_H
 

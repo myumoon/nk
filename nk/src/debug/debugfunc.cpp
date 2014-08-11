@@ -1,10 +1,11 @@
 //=============================================================================
-/*!	@file	debugfunc.cpp
-
+/*!	@file	debugfunc.h
 	@brief	デバッグ処理
-
 	@author	ryunosuke ide
-	@date	2014.08.10
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
 

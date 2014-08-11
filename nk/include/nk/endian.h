@@ -1,9 +1,11 @@
 //=============================================================================
 /*!	@file	endian.h
 	@brief	エンディアン
-
 	@author	ryunosuke ide
-	@date	2013.12.08
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
 

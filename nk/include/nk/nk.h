@@ -1,10 +1,11 @@
 //=============================================================================
 /*!	@file	nk.h
-
 	@brief	nkでよく使用するファイルをまとめています
-
 	@author	ryunosuke ide
-	@date	2014.06.21
+	
+	Copyright (c) 2014 Ryunosuke Ide
+	Released under the MIT license
+	http://opensource.org/licenses/mit-license.php
 */
 //=============================================================================
 
