@@ -50,11 +50,11 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\external\glfw\include;$(ProjectDir)..\external\GL\include</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4201;4505</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -93,6 +93,7 @@
     <ClInclude Include="..\include\nk\debug\debugfunc.h" />
     <ClInclude Include="..\include\nk\endian.h" />
     <ClInclude Include="..\include\nk\macros.h" />
+    <ClInclude Include="..\include\nk\math\vector.h" />
     <ClInclude Include="..\include\nk\system\system.h" />
     <ClInclude Include="..\include\nk\system\systemEventListener.h" />
     <ClInclude Include="..\include\nk\system\window.h" />
@@ -102,8 +103,12 @@
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp" />
     <ClCompile Include="..\src\endian.cpp" />
+    <ClCompile Include="..\src\math\vector.cpp" />
     <ClCompile Include="..\src\system\system.cpp" />
     <ClCompile Include="..\src\system\window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\nk\math\vecutil.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,7 +36,8 @@
 	typedef	unsigned long		 		u64;
 	typedef	float						f32;
 	typedef	double						f64;
-
+#else
+	#error
 #endif
 
 #if defined(_WINDOWS)
