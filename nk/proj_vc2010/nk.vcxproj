@@ -93,6 +93,7 @@
     <ClInclude Include="..\include\nk\debug\debugfunc.h" />
     <ClInclude Include="..\include\nk\endian.h" />
     <ClInclude Include="..\include\nk\macros.h" />
+    <ClInclude Include="..\include\nk\math\math.h" />
     <ClInclude Include="..\include\nk\math\vector.h" />
     <ClInclude Include="..\include\nk\system\system.h" />
     <ClInclude Include="..\include\nk\system\systemEventListener.h" />

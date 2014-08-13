@@ -60,6 +60,9 @@
     <ClInclude Include="..\include\nk\math\vector.h">
       <Filter>include\nk\math</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\nk\math\math.h">
+      <Filter>include\nk\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp">
