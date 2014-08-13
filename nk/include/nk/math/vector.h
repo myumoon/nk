@@ -18,6 +18,7 @@
 
 #include <nk/nk.h>
 #include <nk/math/vecutil.inl>
+#include <nk/math/math.h>
 
 namespace nk {
 namespace math {
@@ -472,6 +473,51 @@ struct Vec4 {
 };
 
 
+//===========================================================================
+/*!	@brief		なす角
+	@param		
+	@return		ラジアン
+*/
+//===========================================================================
+//f32		CalcAngle( const Vector& vec1, const Vector& vec2 );
+
+//===========================================================================
+/*!	@brief		内積
+	@param		none
+	@return		none
+*/
+//===========================================================================
+//f32		DotProduct( const Vector& vec1, const Vector& vec2 );
+
+//===========================================================================
+/*!	@brief		外積
+	@param		none
+	@return		none
+*/
+//===========================================================================
+//Vector	CrossProduct( const Vector& vec1, const Vector& vec2 );
+
+//===========================================================================
+/*!	@brief		符号が全部一致する場合はtrueを返します
+	@param		none
+	@return		none
+*/
+//===========================================================================
+template<typename T>
+inline bool IsSameDirection( const T& vec1, const T& vec2 )
+{
+	if( Sign(vec1.x) != Sign(vec2.x) ) {
+		return false;
+	}
+	if( Sign(vec1.y) != Sign(vec2.y) ) {
+		return false;
+	}
+	if( Sign(vec1.z) != Sign(vec2.z) ) {
+		return false;
+	}
+	
+	return true;
+}
 
 
 
