@@ -44,7 +44,7 @@ struct Vec2 {
 		f32	ary[2];
 	};
 
-	//! {
+	//! @{
 	//! コンストラクタ
 	Vec2();
 	Vec2( f32 x, f32 y );
@@ -52,7 +52,7 @@ struct Vec2 {
 	Vec2( const Vec2& vec2 );
 	Vec2( const Vec3& vec3 );
 	Vec2( const Vec4& vec4 );
-	//! }
+	//! @}
 	
 	//! デストラクタ
 	~Vec2() {}
@@ -192,7 +192,7 @@ struct Vec3 {
 		f32	ary[3];
 	};
 
-	//! {
+	//! @{
 	//! コンストラクタ
 	Vec3();
 	Vec3( f32 x, f32 y, f32 z );
@@ -200,7 +200,7 @@ struct Vec3 {
 	Vec3( const Vec2& vec2 );
 	Vec3( const Vec3& vec3 );
 	Vec3( const Vec4& vec4 );
-	//! }
+	//! @}
 
 	//! デストラクタ
 	~Vec3() {}
@@ -340,7 +340,7 @@ struct Vec4 {
 	};
 
 
-	//! {
+	//! @{
 	//! コンストラクタ
 	Vec4();
 	Vec4( f32 x, f32 y, f32 z, f32 w );
@@ -348,7 +348,7 @@ struct Vec4 {
 	Vec4( const Vec2& vec2 );
 	Vec4( const Vec3& vec3 );
 	Vec4( const Vec4& vec4 );
-	//! }
+	//! @}
 
 	//! デストラクタ
 	~Vec4() {}
@@ -527,9 +527,9 @@ inline bool IsSameDirection( const T& vec1, const T& vec2 )
 	return true;
 }
 
-//! @defgroup Axis Getter
+//! @defgroup VecAxisGetter Axis Getter
 //! @{
-
+	
 //===========================================================================
 /*!	@brief		Vec2型でX軸ベクトルを取得
 	@param		none
