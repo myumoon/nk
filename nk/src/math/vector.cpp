@@ -187,12 +187,12 @@ Vec3 CrossProduct( const Vec3& vec1, const Vec3& vec2 )
 	// (y1*z2-z1y2, z1*x2-x1*z2, x1*y2-y1*x2)
 	// ノルムは |v1||v2|sinθ
 	// 向きは座標系により異なる
-	Vec3	closs;
-	closs.x	= vec1_cpy.y * vec2_cpy.z - vec1_cpy.z * vec2_cpy.y;
-	closs.y	= vec1_cpy.z * vec2_cpy.x - vec1_cpy.x * vec2_cpy.z;
-	closs.z	= vec1_cpy.x * vec2_cpy.y - vec1_cpy.y * vec2_cpy.x;
+	Vec3	cross;
+	cross.x	= vec1_cpy.y * vec2_cpy.z - vec1_cpy.z * vec2_cpy.y;
+	cross.y	= vec1_cpy.z * vec2_cpy.x - vec1_cpy.x * vec2_cpy.z;
+	cross.z	= vec1_cpy.x * vec2_cpy.y - vec1_cpy.y * vec2_cpy.x;
 
-	return closs;
+	return cross;
 }
 
 
@@ -784,13 +784,13 @@ Vector CalcCrossProduct(const Vector *vec1, const Vector *vec2)
 {
 	Vector vec1_cpy(*vec1);
 	Vector vec2_cpy(*vec2);
-	Vector closs_product;		// 外積
+	Vector cross_product;		// 外積
 
 
 	/* 零ベクトルの場合 */
 	if(vec1_cpy.IsVectorZero() || vec2_cpy.IsVectorZero()) {
-		closs_product.SetVector(0.0, 0.0, 0.0);
-		return closs_product;
+		cross_product.SetVector(0.0, 0.0, 0.0);
+		return cross_product;
 	}
 
 
@@ -799,14 +799,14 @@ Vector CalcCrossProduct(const Vector *vec1, const Vector *vec2)
 	//	(y1*z2-z1y2, z1*x2-x1*z2, x1*y2-y1*x2)
 	//	ノルムは |v1||v2|sinθ
 	//	向きは座標系により異なる
-	closs_product.x = vec1_cpy.y * vec2_cpy.z - vec1_cpy.z * vec2_cpy.y;
-	closs_product.y = vec1_cpy.z * vec2_cpy.x - vec1_cpy.x * vec2_cpy.z;
-	closs_product.z = vec1_cpy.x * vec2_cpy.y - vec1_cpy.y * vec2_cpy.x;
+	cross_product.x = vec1_cpy.y * vec2_cpy.z - vec1_cpy.z * vec2_cpy.y;
+	cross_product.y = vec1_cpy.z * vec2_cpy.x - vec1_cpy.x * vec2_cpy.z;
+	cross_product.z = vec1_cpy.x * vec2_cpy.y - vec1_cpy.y * vec2_cpy.x;
 
-	//closs_product.CalcNorm();
+	//cross_product.CalcNorm();
 
 
-	return closs_product;
+	return cross_product;
 }
 
 
@@ -823,13 +823,13 @@ Vector CalcCrossProduct(const Vector& vec1, const Vector& vec2)
 {
 	Vector vec1_cpy(vec1);
 	Vector vec2_cpy(vec2);
-	Vector closs_product;		// 外積
+	Vector cross_product;		// 外積
 
 
 	/* 零ベクトルの場合 */
 	if(vec1_cpy.IsVectorZero() || vec2_cpy.IsVectorZero()) {
-		closs_product.SetVector(0.0, 0.0, 0.0);
-		return closs_product;
+		cross_product.SetVector(0.0, 0.0, 0.0);
+		return cross_product;
 	}
 
 
@@ -838,13 +838,13 @@ Vector CalcCrossProduct(const Vector& vec1, const Vector& vec2)
 	//	(y1*z2-z1y2, z1*x2-x1*z2, x1*y2-y1*x2)
 	//	ノルムは |v1||v2|sinθ
 	//	向きは座標系により異なる
-	closs_product.x = vec1_cpy.y * vec2_cpy.z - vec1_cpy.z * vec2_cpy.y;
-	closs_product.y = vec1_cpy.z * vec2_cpy.x - vec1_cpy.x * vec2_cpy.z;
-	closs_product.z = vec1_cpy.x * vec2_cpy.y - vec1_cpy.y * vec2_cpy.x;
+	cross_product.x = vec1_cpy.y * vec2_cpy.z - vec1_cpy.z * vec2_cpy.y;
+	cross_product.y = vec1_cpy.z * vec2_cpy.x - vec1_cpy.x * vec2_cpy.z;
+	cross_product.z = vec1_cpy.x * vec2_cpy.y - vec1_cpy.y * vec2_cpy.x;
 
-	//closs_product.CalcNorm();
+	//cross_product.CalcNorm();
 
-	return closs_product;
+	return cross_product;
 }
 
 
