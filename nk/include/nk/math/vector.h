@@ -474,28 +474,36 @@ struct Vec4 {
 
 
 //===========================================================================
-/*!	@brief		なす角
-	@param		
+/*!	@brief		ベクトルのなす角をラジアンで取得
+	@param		begin	開始位置
+	@param		end		終了位置
 	@return		ラジアン
+	@attention	どちらかのベクトルがゼロベクトルの場合
+					- Debugビルド時はアサーションに引っかかります
+					- Release版は
 */
 //===========================================================================
-//f32		CalcAngle( const Vector& vec1, const Vector& vec2 );
+f32 CalcAngle( const Vec3& begin, const Vec2& end );
 
 //===========================================================================
-/*!	@brief		内積
-	@param		none
-	@return		none
+/*!	@brief		内積を計算
+	@param		vec1,vec2	計算を行うベクトル
+	@return		内積
 */
 //===========================================================================
-//f32		DotProduct( const Vector& vec1, const Vector& vec2 );
+template<typename T>
+inline f32 DotProduct( const T& vec1, const T& vec2 )
+{
+	return VecDotProduct( vec1, vec2 );
+}
 
 //===========================================================================
-/*!	@brief		外積
-	@param		none
-	@return		none
+/*!	@brief		外積を計算
+	@param		vec1,vec2	計算を行うベクトル
+	@return		外積
 */
 //===========================================================================
-//Vector	CrossProduct( const Vector& vec1, const Vector& vec2 );
+Vec3 CrossProduct( const Vec3& vec1, const Vec3& vec2 );
 
 //===========================================================================
 /*!	@brief		符号が全部一致する場合はtrueを返します
