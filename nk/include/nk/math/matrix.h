@@ -51,7 +51,9 @@ struct Matrix44 {
 
 	//! @{
 	//! コンストラクタ
-	Matrix44();
+	//! @attention	ゼロクリアはしていません
+	//! 			必要に応じて#GetIdentity
+	Matrix44();	
 	Matrix44(
 		f32	m00, f32 m10, f32 m20, f32 m30,
 		f32	m01, f32 m11, f32 m21, f32 m31,
@@ -76,12 +78,6 @@ struct Matrix44 {
 	*/
 	//===========================================================================
 	Vec3	GetTrans() const;
-
-	//===========================================================================
-	/*!	@brief		単位行列に変換
-	*/
-	//===========================================================================
-	void	Identity();
 
 	//===========================================================================
 	/*!	@brief		逆行列に変換
@@ -130,28 +126,34 @@ struct Matrix44 {
 	/*!	@brief		行列を生成
 	*/
 	//===========================================================================
-	//! 平行移動
+	//! ゼロクリアされた行列
+	static Matrix44 Zero();
+	
+	//! 単位行列
+	static Matrix44	Identity();
+		
+	//! 平行移動行列
 	static Matrix44	Translation( const Vec2& vec2 );
 	static Matrix44	Translation( const Vec3& vec3 );
 
-	//! 拡大
+	//! 拡大行列
 	static Matrix44	Scale( const Vec2& vec2 );
 	static Matrix44	Scale( const Vec3& vec3 );
 	static Matrix44	Scale( f32 rate );
 
-	//! X軸回転
+	//! X軸回転行列
 	static Matrix44	RotateX( f32 theta );
 	
-	//! Y軸回転
+	//! Y軸回転行列
 	static Matrix44	RotateY( f32 theta );
 	
-	//! Z軸回転
+	//! Z軸回転行列
 	static Matrix44	RotateZ( f32 theta );
 	
-	//! 任意の軸で回転
+	//! 任意軸回転行列
 	static Matrix44	RotateAxis( const Vec3& axis, f32 theta );
 
-	//! テクスチャ空間に直す
+	//! テクスチャ空間に直す行列
 	//! @todo	未確認
 	//!			場所を変える
 	static Matrix44	PerspectiveToTextureSpace( f32 screenW, f32 screenH );
