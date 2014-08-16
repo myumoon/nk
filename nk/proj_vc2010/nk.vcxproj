@@ -95,6 +95,7 @@
     <ClInclude Include="..\include\nk\macros.h" />
     <ClInclude Include="..\include\nk\math\math.h" />
     <ClInclude Include="..\include\nk\math\matrix.h" />
+    <ClInclude Include="..\include\nk\math\quaternion.h" />
     <ClInclude Include="..\include\nk\math\vector.h" />
     <ClInclude Include="..\include\nk\system\system.h" />
     <ClInclude Include="..\include\nk\system\systemEventListener.h" />
@@ -106,6 +107,7 @@
     <ClCompile Include="..\src\debug\debugfunc.cpp" />
     <ClCompile Include="..\src\endian.cpp" />
     <ClCompile Include="..\src\math\matrix.cpp" />
+    <ClCompile Include="..\src\math\quaternion.cpp" />
     <ClCompile Include="..\src\math\vector.cpp" />
     <ClCompile Include="..\src\system\system.cpp" />
     <ClCompile Include="..\src\system\window.cpp" />
