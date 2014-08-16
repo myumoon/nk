@@ -15,6 +15,8 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
+#include <sstream>
 
 #include <nk/nk.h>
 #include <nk/math/vecutil.inl>
@@ -198,6 +200,16 @@ struct Vec2 {
 		return Vec2( 0.0f, 1.0f);
 	}
 
+	//===========================================================================
+	/*!	@brief		文字列に変換
+	*/
+	//===========================================================================
+	std::string ToStr() const
+	{
+		std::stringstream	str;
+		str	<< "(" << x << "," << y << ")";
+		return str.str();
+	}
 };
 
 
@@ -385,6 +397,17 @@ struct Vec3 {
 	static Vec3 AxisZ()
 	{
 		return Vec3( 0.0f, 0.0f, 1.0f );
+	}
+
+	//===========================================================================
+	/*!	@brief		文字列に変換
+	*/
+	//===========================================================================
+	std::string ToStr() const
+	{
+		std::stringstream	str;
+		str	<< "(" << x << "," << y << "," << z << ")";
+		return str.str();
 	}
 };
 
@@ -588,6 +611,17 @@ struct Vec4 {
 		return Vec4( 0.0f, 0.0f, 0.0f, 1.0f );
 	}
 
+	
+	//===========================================================================
+	/*!	@brief		文字列に変換
+	*/
+	//===========================================================================
+	std::string ToStr() const
+	{
+		std::stringstream	str;
+		str	<< "(" << x << "," << y << "," << z << "," << w << ")";
+		return str.str();
+	}
 };
 
 
@@ -740,7 +774,8 @@ public:
 	Vector&								operator/=( f32 scalar			);
 	bool								operator==( const Vector &vec	) const;
 	bool								operator!=( const Vector &vec	) const;
-	
+
+		
 	//-------------コンストラクタ・デストラクタ--------------
 	Vector( f32 x = 0.0f, f32 y = 0.0f, f32 z = 0.0f, f32 w = 0.0f );	//!< コンストラクタ
 	Vector( const Vector & );											//!< コピーコンストラクタ
