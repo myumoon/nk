@@ -63,6 +63,9 @@
     <ClInclude Include="..\include\nk\math\math.h">
       <Filter>include\nk\math</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\nk\math\matrix.h">
+      <Filter>include\nk\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\debug\debugfunc.cpp">
@@ -78,6 +81,9 @@
       <Filter>src\system</Filter>
     </ClCompile>
     <ClCompile Include="..\src\math\vector.cpp">
+      <Filter>src\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\matrix.cpp">
       <Filter>src\math</Filter>
     </ClCompile>
   </ItemGroup>
