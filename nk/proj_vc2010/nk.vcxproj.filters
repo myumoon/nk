@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1fa33310-c59f-4586-a9ec-a807c136f02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{3a50be8d-02f5-4bc3-9937-e4caf81eb153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk">
+      <UniqueIdentifier>{69c820ab-2953-4313-b86f-03018e580099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk\debug">
+      <UniqueIdentifier>{f81be42a-5cac-42fe-a2dd-98c191a1d1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\debug">
+      <UniqueIdentifier>{44dc8f3c-d4f5-4f8a-96f2-bc298155568d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk\utility">
+      <UniqueIdentifier>{3d12891a-0cad-417f-a006-407784a2038d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\system">
+      <UniqueIdentifier>{5c3a05ee-34de-49e8-8fbe-8622dd741bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk\system">
+      <UniqueIdentifier>{b761b449-46c1-48b8-86e1-11b3e1d6cb9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\nk\math">
+      <UniqueIdentifier>{bdf54824-7f6b-492f-b41a-fd15d11dc2c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\math">
+      <UniqueIdentifier>{e0139bed-85cf-4eb1-814d-4c2d4d330fdb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\nk\debug\debugfunc.h">
+      <Filter>include\nk\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\macros.h">
+      <Filter>include\nk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\types.h">
+      <Filter>include\nk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\endian.h">
+      <Filter>include\nk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\utility\utilityfunc.h">
+      <Filter>include\nk\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\system\system.h">
+      <Filter>include\nk\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\system\systemEventListener.h">
+      <Filter>include\nk\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\system\window.h">
+      <Filter>include\nk\system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\math\vector.h">
+      <Filter>include\nk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\math\math.h">
+      <Filter>include\nk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\math\matrix.h">
+      <Filter>include\nk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\nk\math\quaternion.h">
+      <Filter>include\nk\math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\debug\debugfunc.cpp">
+      <Filter>src\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\endian.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\system\system.cpp">
+      <Filter>src\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\system\window.cpp">
+      <Filter>src\system</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\vector.cpp">
+      <Filter>src\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\matrix.cpp">
+      <Filter>src\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\quaternion.cpp">
+      <Filter>src\math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\nk\math\vecutil.inl">
+      <Filter>include\nk\math</Filter>
+    </None>
+  </ItemGroup>
+</Project>

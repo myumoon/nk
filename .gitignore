@@ -14,7 +14,6 @@
 *.la
 *.a
 *.lib
-
 # Executables
 *.exe
 *.out
@@ -24,5 +23,20 @@
 *.suo
 *.ncb
 *.user
+*.sdf
+*.opensdf
+ipch/
+demo/proj_vs2010/Debug/
+demo/proj_vs2010/*/Debug/
+nk/proj_vs2010/Debug/
 Debug/
 Release/
+
+# 個人ファイル
+memo.txt
+
+# WinMerge
+*.bak
+
+# 考え中
+nk/external/boost/
